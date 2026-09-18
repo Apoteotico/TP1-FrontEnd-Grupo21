@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eitel Hugo Belinzoni — pITzza y birrAPI</title>
+    <meta name="description" content="Perfil de Eitel Hugo Belinzoni en el sitio del equipo pITzza y birrAPI: ciudad, edad, habilidades, películas y discos favoritos." />
+    <meta name="theme-color" content="#12100e" />
+    <link rel="icon" href="img/icono-pizza.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css?v=5" />
+  </head>
+  <body data-profile="eitel">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">
+          <img src="img/icono-pizza.svg" alt="" width="40" height="40" />
+          <span class="logo-mark">
+            <span class="logo-text">pIT<strong>zza</strong> y birrAPI</span>
+            <span class="logo-tag">cine · pizza · birra · código</span>
+          </span>
+        </a>
+        <nav aria-label="Principal">
+          <ul class="nav-list">
+            <li><a href="index.html">Portada</a></li>
+            <li><a href="index.html#integrantes">Integrantes</a></li>
+            <li><a href="index.html#recomendador">Recomendador</a></li>
+            <li><a href="bitacora.html">Bitácora</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="profile">
+      <article class="profile-card">
+        <div class="profile-head">
+          <img
+            src="img/eitel-belinzoni.webp"
+            alt="Imagen de perfil de Eitel Hugo Belinzoni"
+            width="800"
+            height="800"
+          />
+          <div class="profile-id">
+            <p class="eyebrow">Perfil del equipo</p>
+            <h1>Eitel Hugo Belinzoni</h1>
+            <dl class="ficha">
+              <div class="ficha-item"><dt>Ciudad</dt><dd>Mar del Plata</dd></div>
+              <div class="ficha-item"><dt>Edad</dt><dd>32 años</dd></div>
+              <div class="ficha-item"><dt>GitHub</dt><dd><a href="https://github.com/Apoteotico" rel="noopener noreferrer">@Apoteotico</a></dd></div>
+            </dl>
+            <div class="chip-row">
+              <span class="chip">Perseverancia</span>
+              <span class="chip">Resiliencia</span>
+              <span class="chip">Resolución de problemas</span>
+              <span class="chip">Trabajo en equipo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="board">
+          <h2 class="board-title">Películas favoritas</h2>
+          <ul class="meta-grid">
+            <li class="movie-item">A lot like love</li>
+            <li class="movie-item">Harry Potter</li>
+            <li class="movie-item">Guía del viajero intergaláctico</li>
+          </ul>
+
+          <h2 class="board-title">Discos favoritos</h2>
+          <ul class="meta-grid">
+            <li class="album-item" data-album>
+              Mägo de Oz — Finisterra
+            </li>
+            <li class="album-item" data-album>
+              This Is War — 30 Seconds to Mars
+            </li>
+            <li class="album-item" data-album>
+              Guau! — Árbol
+            </li>
+          </ul>
+        </div>
+
+        <blockquote class="quote" id="frase-equipo">
+          El equipo avanza cuando nadie se queda solo con el problema.
+        </blockquote>
+        <div class="profile-actions">
+          <button class="btn" id="btn-perfil" type="button">Otra frase de equipo</button>
+          <p class="muted">Rota una frase sobre trabajo en equipo.</p>
+        </div>
+      </article>
+
+      <aside class="profile-card profile-nav">
+        <p class="panel-kicker">Cinta siguiente</p>
+        <h2>Recorrido del equipo</h2>
+        <p class="muted">
+          Ocho páginas que se recorren sin usar el botón Atrás del navegador.
+        </p>
+        <nav class="pager" aria-label="Navegación entre perfiles">
+          <a class="btn btn-ghost" href="index.html">Portada</a>
+          <a class="btn btn-ghost" href="sonia-andrada.html">Anterior: Sonia</a>
+          <a class="btn btn-ghost" href="esteban-acosta.html">Siguiente: Esteban</a>
+          <a class="btn btn-ghost" href="bitacora.html">Bitácora</a>
+        </nav>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand-block">
+          <p class="footer-brand">pIT<span>zza</span> y birrAPI</p>
+          <span class="footer-rail" aria-hidden="true"></span>
+          <p class="footer-note">
+            Trabajo práctico grupal 1 · Frontend · HTML, CSS y JavaScript sin
+            frameworks.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Enlaces del pie">
+          <a href="index.html">Portada</a>
+          <a href="index.html#integrantes">Integrantes</a>
+          <a href="index.html#recomendador">Recomendador</a>
+          <a href="bitacora.html">Bitácora</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="js/perfiles.js"></script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esteban Acosta — pITzza y birrAPI</title>
+    <meta name="description" content="Perfil de Esteban Acosta en el sitio del equipo pITzza y birrAPI: ciudad, edad, habilidades, películas y discos favoritos." />
+    <meta name="theme-color" content="#12100e" />
+    <link rel="icon" href="img/icono-pizza.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css?v=5" />
+  </head>
+  <body data-profile="esteban">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">
+          <img src="img/icono-pizza.svg" alt="" width="40" height="40" />
+          <span class="logo-mark">
+            <span class="logo-text">pIT<strong>zza</strong> y birrAPI</span>
+            <span class="logo-tag">cine · pizza · birra · código</span>
+          </span>
+        </a>
+        <nav aria-label="Principal">
+          <ul class="nav-list">
+            <li><a href="index.html">Portada</a></li>
+            <li><a href="index.html#integrantes">Integrantes</a></li>
+            <li><a href="index.html#recomendador">Recomendador</a></li>
+            <li><a href="bitacora.html">Bitácora</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="profile">
+      <article class="profile-card">
+        <div class="profile-head">
+          <img
+            src="img/esteban-acosta.webp"
+            alt="Imagen de perfil de Esteban Acosta"
+            width="800"
+            height="800"
+          />
+          <div class="profile-id">
+            <p class="eyebrow">Perfil del equipo</p>
+            <h1>Esteban Acosta</h1>
+            <dl class="ficha">
+              <div class="ficha-item"><dt>Ciudad</dt><dd>Rosario – Santa Fe</dd></div>
+              <div class="ficha-item"><dt>Edad</dt><dd>52 años</dd></div>
+              <div class="ficha-item"><dt>GitHub</dt><dd><a href="https://github.com/otra-tecla" rel="noopener noreferrer">@otra-tecla</a></dd></div>
+            </dl>
+            <div class="chip-row">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Comunicación</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="board">
+          <h2 class="board-title">Películas favoritas</h2>
+          <ul class="meta-grid">
+            <li class="movie-item">Gladiador (2000)</li>
+            <li class="movie-item">Hombre en llamas (2004)</li>
+            <li class="movie-item">El Caballero de la Noche (2008)</li>
+          </ul>
+
+          <h2 class="board-title">Discos favoritos</h2>
+          <ul class="meta-grid">
+            <li class="album-item" data-album>
+              Rolling Stones — Exile on Main St. (1972)
+            </li>
+            <li class="album-item" data-album>
+              Los Fabulosos Cadillacs — Vasos Vacíos (1993)
+            </li>
+            <li class="album-item" data-album>
+              Memphis la Blusera — Cosa de hombres (1996)
+            </li>
+          </ul>
+        </div>
+
+        <div class="profile-actions">
+          <p class="birra-contador" role="status">🍺 Birras donadas: <strong id="birras-esteban">0</strong></p>
+          <button class="btn" id="btn-perfil" type="button">Donar una birra 🍺</button>
+          <p class="muted" id="mensaje-birras">Tocá el botón y sumá una birra.</p>
+        </div>
+      </article>
+
+      <aside class="profile-card profile-nav">
+        <p class="panel-kicker">Cinta siguiente</p>
+        <h2>Recorrido del equipo</h2>
+        <p class="muted">
+          Ocho páginas que se recorren sin usar el botón Atrás del navegador.
+        </p>
+        <nav class="pager" aria-label="Navegación entre perfiles">
+          <a class="btn btn-ghost" href="index.html">Portada</a>
+          <a class="btn btn-ghost" href="eitel-belinzoni.html">Anterior: Eitel</a>
+          <a class="btn btn-ghost" href="guillermo-chacon.html">Siguiente: Guillermo</a>
+          <a class="btn btn-ghost" href="bitacora.html">Bitácora</a>
+        </nav>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand-block">
+          <p class="footer-brand">pIT<span>zza</span> y birrAPI</p>
+          <span class="footer-rail" aria-hidden="true"></span>
+          <p class="footer-note">
+            Trabajo práctico grupal 1 · Frontend · HTML, CSS y JavaScript sin
+            frameworks.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Enlaces del pie">
+          <a href="index.html">Portada</a>
+          <a href="index.html#integrantes">Integrantes</a>
+          <a href="index.html#recomendador">Recomendador</a>
+          <a href="bitacora.html">Bitácora</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="js/perfiles.js"></script>
+  </body>
+</html>

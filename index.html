@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pITzza y birrAPI — Portada del equipo</title>
+    <meta
+      name="description"
+      content="Portada del equipo pITzza y birrAPI: cinco perfiles, recomendación de peli, pizza y birra, y bitácora. TP1 de Frontend."
+    />
+    <meta name="theme-color" content="#12100e" />
+    <meta property="og:title" content="pITzza y birrAPI" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Cinco personas, una productora: código, cine, pizza y birra artesanal."
+    />
+    <link rel="icon" href="img/icono-pizza.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css?v=5" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">
+          <img src="img/icono-pizza.svg" alt="" width="40" height="40" />
+          <span class="logo-mark">
+            <span class="logo-text">pIT<strong>zza</strong> y birrAPI</span>
+            <span class="logo-tag">cine · pizza · birra · código</span>
+          </span>
+        </a>
+        <nav aria-label="Principal">
+          <ul class="nav-list">
+            <li><a href="index.html" aria-current="page">Portada</a></li>
+            <li><a href="#integrantes">Integrantes</a></li>
+            <li><a href="#recomendador">Recomendador</a></li>
+            <li><a href="bitacora.html">Bitácora</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- Marquesina: el hero ocupa todo el ancho y su texto se alinea al contenedor -->
+      <section class="hero" aria-labelledby="hero-titulo">
+        <div class="hero-inner wrap">
+          <p class="eyebrow">TP1 Frontend · función de gala</p>
+          <h1 id="hero-titulo">pIT<span>zza</span> y birrAPI</h1>
+          <p class="hero-tagline">
+            Cinco personas, una productora: cocinamos código, servimos birra
+            artesanal y estrenamos película los viernes.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#integrantes">Ver integrantes</a>
+            <a class="btn btn-birra" href="bitacora.html">Leer la bitácora</a>
+          </div>
+          <div class="hero-media">
+            <span class="pillar"><img src="img/icono-cine.svg" alt="" width="34" height="34" />Cartelera</span>
+            <span class="pillar"><img src="img/icono-pizza.svg" alt="" width="34" height="34" />Pizza de la casa</span>
+            <span class="pillar"><img src="img/icono-birra.svg" alt="" width="34" height="34" />Birra artesanal</span>
+            <span class="pillar"><img src="img/icono-codigo.svg" alt="" width="34" height="34" />Código del equipo</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="integrantes" aria-labelledby="integrantes-titulo">
+        <div class="section-head">
+          <p class="eyebrow">Cartelera</p>
+          <h2 id="integrantes-titulo">Los cinco afiches del equipo</h2>
+          <span class="rule" aria-hidden="true"></span>
+          <p class="section-intro">
+            Cada afiche abre el perfil completo: ciudad, edad, habilidades,
+            películas y discos.
+          </p>
+        </div>
+        <div class="card-grid">
+          <a class="member-card" href="florencia-guzman.html">
+            <div class="member-photo">
+              <span class="member-strip" aria-hidden="true"></span>
+              <img
+                src="img/florencia-guzman.webp"
+                alt="Imagen de perfil de Florencia Guzmán"
+                width="800"
+                height="800"
+                loading="lazy"
+              />
+            </div>
+            <div class="member-body">
+              <h3 class="member-name">Florencia Guzmán</h3>
+              <p class="member-city">Cañuelas · 30 años</p>
+              <p class="member-role">HTML · CSS · JS · React</p>
+              <p class="member-cta">Ver perfil →</p>
+            </div>
+          </a>
+
+          <a class="member-card" href="sonia-andrada.html">
+            <div class="member-photo">
+              <span class="member-strip" aria-hidden="true"></span>
+              <img
+                src="img/sonia-andrada.webp"
+                alt="Imagen de perfil de Sonia Andrada"
+                width="800"
+                height="800"
+                loading="lazy"
+              />
+            </div>
+            <div class="member-body">
+              <h3 class="member-name">Sonia Raquel Andrada</h3>
+              <p class="member-city">CABA · 28 años</p>
+              <p class="member-role">JavaScript · CSS · HTML · GitHub</p>
+              <p class="member-cta">Ver perfil →</p>
+            </div>
+          </a>
+
+          <a class="member-card" href="eitel-belinzoni.html">
+            <div class="member-photo">
+              <span class="member-strip" aria-hidden="true"></span>
+              <img
+                src="img/eitel-belinzoni.webp"
+                alt="Imagen de perfil de Eitel Belinzoni"
+                width="800"
+                height="800"
+                loading="lazy"
+              />
+            </div>
+            <div class="member-body">
+              <h3 class="member-name">Eitel Hugo Belinzoni</h3>
+              <p class="member-city">Mar del Plata · 32 años</p>
+              <p class="member-role">Perseverancia · Resiliencia</p>
+              <p class="member-cta">Ver perfil →</p>
+            </div>
+          </a>
+
+          <a class="member-card" href="esteban-acosta.html">
+            <div class="member-photo">
+              <span class="member-strip" aria-hidden="true"></span>
+              <img
+                src="img/esteban-acosta.webp"
+                alt="Imagen de perfil de Esteban Acosta"
+                width="800"
+                height="800"
+                loading="lazy"
+              />
+            </div>
+            <div class="member-body">
+              <h3 class="member-name">Esteban Acosta</h3>
+              <p class="member-city">Rosario · 52 años</p>
+              <p class="member-role">HTML · CSS · JS · Comunicación</p>
+              <p class="member-cta">Ver perfil →</p>
+            </div>
+          </a>
+
+          <a class="member-card" href="guillermo-chacon.html">
+            <div class="member-photo">
+              <span class="member-strip" aria-hidden="true"></span>
+              <img
+                src="img/guillermo.webp"
+                alt="Imagen de perfil de Guillermo Alberto Chacon"
+                width="800"
+                height="800"
+                loading="lazy"
+              />
+            </div>
+            <div class="member-body">
+              <h3 class="member-name">Guillermo Alberto Chacon</h3>
+              <p class="member-city">CABA · 47 años</p>
+              <p class="member-role">Liderazgo · Magia · Mente</p>
+              <p class="member-cta">Ver perfil →</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section" id="recomendador" aria-labelledby="recomendador-titulo">
+        <div class="section-head">
+          <p class="eyebrow">Mostrador</p>
+          <h2 id="recomendador-titulo">Armá tu noche</h2>
+          <span class="rule" aria-hidden="true"></span>
+          <p class="section-intro">
+            Un clic: película, maridaje de pizza y birra, y un proyecto corto
+            para programar durante la semana.
+          </p>
+        </div>
+        <div class="booth-grid">
+          <article class="panel panel--tinta">
+            <p class="panel-kicker">La función de hoy</p>
+            <h3>Sortear la función de hoy</h3>
+            <p class="panel-note">
+              El catálogo sale de los gustos que cada integrante cargó en su
+              perfil.
+            </p>
+            <div class="panel-actions">
+              <button class="btn btn-birra" id="btn-noche" type="button">Armar mi noche</button>
+            </div>
+            <p class="result" id="noche-resultado" role="status">
+              <span class="result-hint">Tocá el botón para recibir una recomendación.</span>
+            </p>
+          </article>
+
+          <article class="panel">
+            <p class="panel-kicker">Reglas del sorteo</p>
+            <h3>Cómo se arma la noche</h3>
+            <ol class="meta-grid">
+              <li>Una película del catálogo del equipo.</li>
+              <li>Un maridaje de pizza y birra de la casa.</li>
+              <li>Un proyecto corto para programar esta semana.</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand-block">
+          <p class="footer-brand">pIT<span>zza</span> y birrAPI</p>
+          <span class="footer-rail" aria-hidden="true"></span>
+          <p class="footer-note">
+            Trabajo práctico grupal 1 · Frontend · HTML, CSS y JavaScript sin
+            frameworks.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Enlaces del pie">
+          <a href="index.html">Portada</a>
+          <a href="#integrantes">Integrantes</a>
+          <a href="#recomendador">Recomendador</a>
+          <a href="bitacora.html">Bitácora</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

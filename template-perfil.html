@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plantilla de perfil — pITzza y birrAPI</title>
+    <meta name="description" content="Plantilla para copiar un perfil nuevo del equipo pITzza y birrAPI: misma estructura, mismas clases CSS y una interacción de ejemplo." />
+    <meta name="theme-color" content="#12100e" />
+    <link rel="icon" href="img/icono-pizza.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css?v=5" />
+  </head>
+  <body data-profile="plantilla">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">
+          <img src="img/icono-pizza.svg" alt="" width="40" height="40" />
+          <span class="logo-mark">
+            <span class="logo-text">pIT<strong>zza</strong> y birrAPI</span>
+            <span class="logo-tag">cine · pizza · birra · código</span>
+          </span>
+        </a>
+        <nav aria-label="Principal">
+          <ul class="nav-list">
+            <li><a href="index.html">Portada</a></li>
+            <li><a href="index.html#integrantes">Integrantes</a></li>
+            <li><a href="index.html#recomendador">Recomendador</a></li>
+            <li><a href="bitacora.html">Bitácora</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="profile">
+      <article class="profile-card">
+        <div class="profile-head">
+          <!-- Reemplazá este div por la imagen del integrante (ver CONTRIBUTING.md):
+            <img src="img/nombre-apellido.webp" alt="Imagen de perfil de Nombre Apellido" width="800" height="800" /> -->
+          <div class="avatar avatar-fallback" role="img" aria-label="Imagen de perfil pendiente">
+            NA
+          </div>
+          <div class="profile-id">
+            <p class="eyebrow">Perfil del equipo · plantilla</p>
+            <h1>Nombre Apellido</h1>
+            <dl class="ficha">
+              <div class="ficha-item"><dt>Ciudad</dt><dd>Ciudad</dd></div>
+              <div class="ficha-item"><dt>Edad</dt><dd>Edad años</dd></div>
+              <div class="ficha-item"><dt>GitHub</dt><dd><a href="https://github.com/USUARIO" rel="noopener noreferrer">@USUARIO</a></dd></div>
+            </dl>
+            <div class="chip-row">
+              <span class="chip">Habilidad 1</span>
+              <span class="chip">Habilidad 2</span>
+              <span class="chip">Habilidad 3</span>
+              <span class="chip">Habilidad 4</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="board">
+          <h2 class="board-title">Películas favoritas</h2>
+          <ul class="meta-grid">
+            <li class="movie-item" data-movie>Película 1</li>
+            <li class="movie-item" data-movie>Película 2</li>
+            <li class="movie-item" data-movie>Película 3</li>
+          </ul>
+
+          <h2 class="board-title">Discos favoritos</h2>
+          <ul class="meta-grid">
+            <li class="album-item" data-album>
+              Disco 1
+              <p class="album-detail">Detalle opcional del disco.</p>
+            </li>
+            <li class="album-item" data-album>
+              Disco 2
+              <p class="album-detail">Detalle opcional del disco.</p>
+            </li>
+            <li class="album-item" data-album>
+              Disco 3
+              <p class="album-detail">Detalle opcional del disco.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="profile-actions">
+          <button class="btn" id="btn-perfil" type="button">Probar la interacción</button>
+          <p class="muted">El botón muestra los estados que el CSS ya tiene listos: una película resaltada y un disco abierto.</p>
+        </div>
+      </article>
+
+      <aside class="profile-card profile-nav">
+        <p class="panel-kicker">Plantilla</p>
+        <h2>Cómo usar esta plantilla</h2>
+        <p class="muted">
+          Copiá este archivo, renombralo a nombre-apellido.html y reemplazá textos, foto y enlace de GitHub. No cambies las clases CSS si querés que se vea igual al resto. Después: poné tu clave en data-profile y agregá tu función en js/perfiles.js.
+        </p>
+        <nav class="pager" aria-label="Navegación entre perfiles">
+          <a class="btn btn-ghost" href="index.html">Portada</a>
+          <a class="btn btn-ghost" href="bitacora.html">Bitácora</a>
+        </nav>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand-block">
+          <p class="footer-brand">pIT<span>zza</span> y birrAPI</p>
+          <span class="footer-rail" aria-hidden="true"></span>
+          <p class="footer-note">
+            Trabajo práctico grupal 1 · Frontend · HTML, CSS y JavaScript sin
+            frameworks.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Enlaces del pie">
+          <a href="index.html">Portada</a>
+          <a href="index.html#integrantes">Integrantes</a>
+          <a href="index.html#recomendador">Recomendador</a>
+          <a href="bitacora.html">Bitácora</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="js/perfiles.js"></script>
+  </body>
+</html>

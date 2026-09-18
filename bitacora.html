@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitácora — pITzza y birrAPI</title>
+    <meta name="description" content="Bitácora del equipo pITzza y birrAPI: decisiones, dificultades y resoluciones del desarrollo del sitio, entrada por entrada." />
+    <meta name="theme-color" content="#12100e" />
+    <link rel="icon" href="img/icono-pizza.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css?v=5" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">
+          <img src="img/icono-pizza.svg" alt="" width="40" height="40" />
+          <span class="logo-mark">
+            <span class="logo-text">pIT<strong>zza</strong> y birrAPI</span>
+            <span class="logo-tag">cine · pizza · birra · código</span>
+          </span>
+        </a>
+        <nav aria-label="Principal">
+          <ul class="nav-list">
+            <li><a href="index.html">Portada</a></li>
+            <li><a href="index.html#integrantes">Integrantes</a></li>
+            <li><a href="index.html#recomendador">Recomendador</a></li>
+            <li><a href="bitacora.html" aria-current="page">Bitácora</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Acta de rodaje</p>
+        <h1>Bitácora</h1>
+        <span class="rule" aria-hidden="true"></span>
+        <p class="section-intro">
+          13 entradas del proceso: qué se decidió, qué costó y cómo se resolvió.
+        </p>
+      </div>
+
+      <div class="log-feed">
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-17">17 sep 2026</time>
+            <h3>Organización del repositorio</h3>
+            <span class="log-cat">repositorio</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>El sitio vive en la raíz (<code>index.html</code> junto a <code>css/</code>, <code>js/</code> e <code>img/</code>). Las carpetas internas (<code>context/</code> y <code>promnt/</code>) quedan fuera de Git.</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>Un primer impulso era meter el entregable en una subcarpeta. La consigna pide la portada en la raíz; si no, la rúbrica puede marcar que no cumple.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span><code>.gitignore</code> separa lo interno de lo que se sube a GitHub.</span></p>
+          </div>
+        </article>
+
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-17">17 sep 2026</time>
+            <h3>Identidad visual</h3>
+            <span class="log-cat">diseño</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>Nombre pITzza y birrAPI, paleta de corteza, mozzarella, tomate y dorado, tipografías Fraunces y Outfit, y avatares con iniciales (no fotos inventadas).</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>No mezclar tres temas (cine, pizza y “agencia de diseño”) hasta perder claridad.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span>El cine y la pizza son contenido; el diseño web es el oficio del sitio, no otra historia.</span></p>
+          </div>
+        </article>
+
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-17">17 sep 2026</time>
+            <h3>CSS y breakpoints</h3>
+            <span class="log-cat">css</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>Mobile first, con media queries en 400 px, 900 px y 1200 px, más un normalize corto propio.</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>Cinco tarjetas en móvil se apilan; en escritorio hay que evitar desbordes.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span>Una columna, luego dos, tres y cinco, con <code>overflow-x: hidden</code> en el body y anchos en <code>min()</code> para que nada se salga de la pantalla.</span></p>
+          </div>
+        </article>
+
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-17">17 sep 2026</time>
+            <h3>JavaScript</h3>
+            <span class="log-cat">javascript</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>Una función en la portada (noche recomendada) y una distinta por perfil, todas en JavaScript vanilla y sin librerías.</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>No inflar el TP con frameworks ni dejar interacciones tan pobres que parezcan un <code>alert()</code>.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span>Cambios visibles en el DOM: resaltar película, abrir detalle de disco, rotar frase y marcar disco en reproducción.</span></p>
+          </div>
+        </article>
+
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-17">17 sep 2026</time>
+            <h3>Perfil de Guillermo</h3>
+            <span class="log-cat">contenido</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>Perfil completo de Guillermo: foto, ciudad, edad, habilidades, películas y discos aportados por él.</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>Entregar un perfil vacío baja la nota; inventar gustos personales tampoco corresponde.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span>Se cargaron sus datos reales y su interacción marca un disco en reproducción.</span></p>
+          </div>
+        </article>
+
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-17">17 sep 2026</time>
+            <h3>Documentación</h3>
+            <span class="log-cat">documentación</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>README con paleta, árbol de archivos, funciones JavaScript, GitHub de cada integrante y lugar para la URL de Vercel.</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>El README incompleto desaprueba el TP: no alcanza con que el código funcione.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span>Checklist de la consigna repartido entre README, AI-USAGE, CONTRIBUTING y GIT-GUIDE.</span></p>
+          </div>
+        </article>
+
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-17">17 sep 2026</time>
+            <h3>Auditoría e imágenes de perfil</h3>
+            <span class="log-cat">imágenes</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>Reemplazar los avatares SVG por las imágenes de cada integrante, normalizadas a cuadrado de 800 × 800 px en WebP, y conservar los iconos SVG de pizza, birra y cine porque son parte del logo.</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>Las imágenes llegaron en tamaños muy distintos (una apaisada y dos verticales) y el CSS las recortaba en círculo: sin recortar antes, el rostro quedaba descentrado. La más pesada tenía 914 KB, casi el doble del límite de 500 KB que indica CONTRIBUTING.md.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span>Recorte cuadrado centrado en el rostro con <code>ffmpeg</code> (914 KB → 26 KB en el caso más pesado), <code>object-position</code> de respaldo en el CSS y <code>width</code>, <code>height</code> y <code>loading="lazy"</code> en la portada para evitar saltos de maquetado.</span></p>
+          </div>
+        </article>
+
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-17">17 sep 2026</time>
+            <h3>Rediseño visual “Función de gala”</h3>
+            <span class="log-cat">diseño · UX/UI</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>Rehacer la capa visual sin tocar la lógica: hero a todo el ancho tipo marquesina, secciones más grandes y con más aire, tarjetas-afiche con la foto en 4/5, listas numeradas tipo ficha técnica, bitácora con línea de tiempo y pie con enlaces. La cabecera y el pie quedaron idénticos en las 8 páginas, y se agregaron favicon, <code>description</code> y <code>theme-color</code>.</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>El logotipo mostraba un espacio entre “pIT” y “zza”: <code>.logo</code> era un flex con <code>gap</code> y el nombre estaba partido en tres nodos de texto, así que el <code>gap</code> se aplicaba entre texto y texto. Además, con el grid de cinco columnas las fotos se veían en círculos de 88 px y no se apreciaban.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span>El nombre pasó a un único <code>.logo-text</code>, así el <code>gap</code> sólo separa el icono del texto. Las fotos dejaron de ser círculos chicos: ahora son afiches de 216 a 290 px de ancho según el breakpoint. Se revisó que nada de la consigna cambie: siguen los breakpoints 400/900/1200 px y ninguna página desborda.</span></p>
+          </div>
+        </article>
+
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-17">17 sep 2026</time>
+            <h3>Tema IT/API y sorteo de proyectos</h3>
+            <span class="log-cat">javascript</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>Sumar la parte de tecnología a la temática: la portada tiene una sección “API del equipo” con endpoints GET y POST que documentan los bloques del sitio, y el sorteo de la noche ahora también recomienda un proyecto corto para programar, con su stack y su nivel.</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>El sitio hablaba sólo de cine y pizza, así que la mitad del nombre del grupo (IT y API) no aparecía en ningún lado. Además, el resultado del sorteo era una línea de texto larga que se leía mal.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span>El resultado se devuelve en filas con rótulo (Película, Pizza, Birra, Proyecto, Stack) dentro de una caja con alto reservado, y se sumó <code>prefers-reduced-motion</code> para desactivar las transiciones de quien lo pida en su sistema.</span></p>
+          </div>
+        </article>
+
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-17">17 sep 2026</time>
+            <h3>Documentación del rediseño</h3>
+            <span class="log-cat">documentación</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>Actualizar README (guía de estilos, funciones y estructura), AI-USAGE (rediseño y prompts), CONTRIBUTING (qué se puede tocar y cómo agregar la interacción propia) y sumar <code>context/contextocompleto.md</code> y <code>context/auditoria.md</code> como material interno del equipo.</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>La documentación había quedado desfasada con el rediseño y la rúbrica exige que el README explique cada función JavaScript.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span>Se revisó archivo por archivo. El README ahora incluye la sección API del equipo, el sorteo de proyectos y los estados de interacción (<code>is-highlight</code>, <code>is-open</code>, <code>is-playing</code>).</span></p>
+          </div>
+        </article>
+
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-17">17 sep 2026</time>
+            <h3>Limpieza de requisitos visibles y navegación</h3>
+            <span class="log-cat">corrección</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>Quitar el bloque <code>hero-meta</code> de la portada: mostraba requisitos internos como texto visible. Unificar la navegación con la sección <code>#api</code> y usar anclas simples (<code>#integrantes</code>, <code>#recomendador</code>, <code>#api</code>) dentro de la portada.</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>El menú no enlazaba a la sección de API y el pie sí, y la regla <code>.hero</code> estaba definida dos veces en el CSS.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span>Se eliminó <code>hero-meta</code> del HTML y del CSS, se dejó una sola regla <code>.hero</code> tipo marquesina y se mantuvo el diseño. Sin funciones nuevas.</span></p>
+          </div>
+        </article>
+
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-18">18 sep 2026</time>
+            <h3>Esteban y Guillermo ya no repiten</h3>
+            <span class="log-cat">javascript</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>Esteban ahora tiene un contador de birras donadas y Guillermo una lluvia de 🍕 y 🍺. Afuera el “disco en reproducción” duplicado: no tenía sentido.</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>Los dos perfiles hacían lo mismo y ninguno reproducía música de verdad.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span>Se borraron <code>estebanDisco()</code>, <code>guillermoDisco()</code> y el CSS de <code>is-playing</code>. Cada perfil tiene su función propia y el README cuenta qué hace cada botón.</span></p>
+          </div>
+        </article>
+
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-18">18 sep 2026</time>
+            <h3>Sección API afuera, hero más grande</h3>
+            <span class="log-cat">diseño</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>Sacar la sección “API del equipo” de la portada: era ruido en una materia de frontend. El hero ahora ocupa una sección real (alto de marquesina) para que la página tenga recorrido.</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>Sin esa sección la portada quedaba muy corta y el hero parecía un simple encabezado.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span>Se borró la sección y su CSS, se agrandó el hero con alto mínimo y se actualizaron los pies, el README y el comentario de <code>js/main.js</code>.</span></p>
+          </div>
+        </article>
+      </div>
+
+      <nav class="pager" aria-label="Salir de la bitácora">
+        <a class="btn" href="index.html">Volver a la portada</a>
+        <a class="btn btn-ghost" href="index.html#integrantes">Ver integrantes</a>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand-block">
+          <p class="footer-brand">pIT<span>zza</span> y birrAPI</p>
+          <span class="footer-rail" aria-hidden="true"></span>
+          <p class="footer-note">
+            Trabajo práctico grupal 1 · Frontend · HTML, CSS y JavaScript sin
+            frameworks.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Enlaces del pie">
+          <a href="index.html">Portada</a>
+          <a href="index.html#integrantes">Integrantes</a>
+          <a href="index.html#recomendador">Recomendador</a>
+          <a href="bitacora.html">Bitácora</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+# Normaliza los finales de linea para que el repositorio no muestre cambios
+# falsos entre Windows y Linux/Vercel.
+* text=auto eol=lf
+
+# Imagenes (no se tocan)
+*.webp binary
+*.png binary
+*.jpg binary
+*.ico binary
+
+# Texto explicito
+*.html text
+*.css text
+*.js text
+*.md text
+*.svg text
