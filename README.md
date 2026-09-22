@@ -60,7 +60,7 @@ Una sola idea para las 8 páginas: marquesina oscura + papel crema, con tomate y
 
 ### Breakpoints
 
-Mobile first: `400px` → dos columnas · `900px` → tres columnas y perfil en dos · `1200px` → cinco afiches en fila.
+Mobile first: hasta `400px` → una columna · desde `480px` → dos columnas · `900px` → tres columnas y perfil en dos · `1200px` → cinco afiches en fila.
 
 ## JavaScript (detalle)
 
@@ -72,7 +72,7 @@ Mobile first: `400px` → dos columnas · `900px` → tres columnas y perfil en 
 | Sonia | `soniaDisco()` | Abre la nota de un disco |
 | Eitel | `eitelFrase()` | Rota una frase de equipo |
 | Esteban | `estebanBirras()` | Suma una birra donada al contador |
-| Guillermo | `guillermoLluvia()` | Llena la pantalla de 🍕 y 🍺 |
+| Guillermo | `guillermoLluvia()` | Contador de rondas, mensajes rotativos y lluvia/explosión de 🍕 y 🍺 |
 
 ![Captura perfil Florencia](img/capturas/perfil-florencia.svg)
 ![Captura perfil Sonia](img/capturas/perfil-sonia.svg)

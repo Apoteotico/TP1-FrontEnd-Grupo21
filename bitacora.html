@@ -218,6 +218,19 @@
             <p class="log-part log-resolucion"><strong>Resolución</strong><span>Se borró la sección y su CSS, se agrandó el hero con alto mínimo y se actualizaron los pies, el README y el comentario de <code>js/main.js</code>.</span></p>
           </div>
         </article>
+
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-22">22 sep 2026</time>
+            <h3>Mejora responsive para móvil y experiencia táctil</h3>
+            <span class="log-cat">responsive</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>Acomodar los afiches de integrantes en una sola columna en pantallas de 400 px o menos, establecer la altura del hero en 100% dvh mínimo, diferenciar visualmente los botones de navegación entre perfiles (anterior en azul código y siguiente en dorado birra) e incorporar respuesta visual inmediata (contador interactivo, mensajes rotativos y explosión/lluvia de emojis) en el botón del perfil de Guillermo.</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>En móviles de 400 px las dos columnas apretaban los nombres de los integrantes y los botones de recorrido no tenían jerarquía visual. Además, en celulares la animación de emojis no se percibía al estar el usuario al final de la página.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span>Se ajustaron las media queries en <code>css/styles.css</code> para garantizar una sola columna en móviles pequeños y medianos, se configuró el hero con unidades <code>dvh</code> y se vincularon partículas y contador directamente al botón de Guillermo con alto <code>z-index</code>.</span></p>
+          </div>
+        </article>
       </div>
 
       <nav class="pager" aria-label="Salir de la bitácora">

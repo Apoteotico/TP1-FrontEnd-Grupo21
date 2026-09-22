@@ -484,7 +484,8 @@ a:focus-visible {
   align-content: center;
   min-width: 0;
   max-width: 100%;
-  min-height: clamp(26rem, 62vh, 36rem);
+  min-height: 100vh;
+  min-height: 100dvh;
   margin-top: 0;
   padding: clamp(3rem, 8vh, 5rem) 0 clamp(3.5rem, 9vh, 5.5rem);
   border-radius: 0;
@@ -1044,30 +1045,83 @@ a:focus-visible {
   font-family: var(--fuente-codigo);
 }
 
-/* Lluvia de emojis (Guillermo): caen de arriba y se borran solos. */
+/* Lluvia y explosión de emojis (Guillermo): caen de arriba y brotan del botón. */
 .lluvia-emoji {
   position: fixed;
-  top: -3rem;
-  z-index: 60;
-  font-size: 2rem;
+  top: -2.5rem;
+  z-index: 9999;
+  font-size: clamp(2rem, 5vw, 2.75rem);
   pointer-events: none;
-  animation: lluvia-caida 1.8s ease-in forwards;
+  user-select: none;
+  animation: lluvia-caida 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform, opacity;
 }
 
 @keyframes lluvia-caida {
-  to {
-    transform: translateY(110vh) rotate(40deg);
-    opacity: 0.2;
+  0% {
+    transform: translateY(0) rotate(0deg) scale(0.85);
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105dvh) rotate(45deg) scale(1.1);
+    opacity: 0;
   }
 }
 
-/* Sin animación si el sistema la desactiva: los emojis aparecen y se borran. */
+/* Explosión de emojis desde el botón (garantiza efecto visible en pantalla en celular) */
+.emoji-pop {
+  position: fixed;
+  z-index: 9999;
+  font-size: clamp(2rem, 6vw, 3rem);
+  pointer-events: none;
+  user-select: none;
+  animation: emoji-burst 1.2s ease-out forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes emoji-burst {
+  0% {
+    transform: translate(-50%, -50%) scale(0.4);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(-50% + var(--pop-y, -60px))) scale(1.25) rotate(var(--pop-rot, 15deg));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(-50% + var(--pop-y, -60px) + 35px)) scale(0.9) rotate(var(--pop-rot, 30deg));
+  }
+}
+
+/* Contador de rondas de pizza y birra */
+.invitacion-contador {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--tomate-oscuro);
+  margin-bottom: 0.25rem;
+}
+
+.invitacion-contador strong {
+  font-size: 1.15rem;
+  font-family: var(--fuente-codigo);
+  color: var(--tinta);
+  background: var(--birra);
+  padding: 0.15rem 0.6rem;
+  border-radius: 0.45rem;
+}
+
+/* Sin animación si el sistema la desactiva */
 @media (prefers-reduced-motion: reduce) {
-  .lluvia-emoji {
-    animation: none;
-    position: static;
-    display: inline-block;
-    margin-right: 0.3rem;
+  .lluvia-emoji,
+  .emoji-pop {
+    display: none !important;
   }
 }
 
@@ -1156,6 +1210,43 @@ a:focus-visible {
   flex-wrap: wrap;
   gap: 0.55rem;
   margin-top: 0.4rem;
+}
+
+/* Botones de navegación entre perfiles (Anterior / Siguiente) */
+.btn-prev,
+.profile-nav .pager a:nth-child(2) {
+  background: rgba(43, 111, 143, 0.08);
+  border-color: rgba(43, 111, 143, 0.45);
+  color: var(--codigo);
+  font-weight: 600;
+}
+
+.btn-prev:hover,
+.btn-prev:focus-visible,
+.profile-nav .pager a:nth-child(2):hover,
+.profile-nav .pager a:nth-child(2):focus-visible {
+  background: var(--codigo);
+  border-color: var(--codigo);
+  color: #ffffff;
+}
+
+.btn-next,
+.profile-nav .pager a:nth-child(3) {
+  background: var(--birra);
+  border-color: var(--birra);
+  color: var(--tinta);
+  font-weight: 700;
+  box-shadow: 0 4px 14px -4px rgba(232, 167, 43, 0.6);
+}
+
+.btn-next:hover,
+.btn-next:focus-visible,
+.profile-nav .pager a:nth-child(3):hover,
+.profile-nav .pager a:nth-child(3):focus-visible {
+  background: #d1921c;
+  border-color: #d1921c;
+  color: var(--tinta);
+  transform: translateY(-2px);
 }
 
 .profile-nav {
@@ -1346,13 +1437,14 @@ a:focus-visible {
 
 /* 11. Breakpoints: 400 / 900 / 1200 px ================================= */
 
-/* Teléfonos medianos y grandes: 2 afiches por fila.
-   Los nombres se parten por palabra entera, nunca a mitad de palabra. */
-@media (min-width: 400px) {
+/* En pantallas de 400px o menos, los afiches van estrictamente en una sola columna */
+@media (max-width: 400px) {
   .card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
+}
 
+@media (min-width: 400px) {
   .member-name {
     overflow-wrap: break-word;
     word-break: normal;
@@ -1361,6 +1453,13 @@ a:focus-visible {
 
   .hero-actions .btn {
     flex: 1 1 auto;
+  }
+}
+
+/* Teléfonos medianos (a partir de 480px): 2 afiches por fila */
+@media (min-width: 480px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
