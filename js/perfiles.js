@@ -67,20 +67,72 @@ function estebanBirras() {
   }
 }
 
-/* Guillermo: lluvia de pizza y birra. Tira 12 emojis que caen y se borran. */
-function guillermoLluvia() {
-  const emojis = ["🍕", "🍺"];
-  for (let i = 0; i < 12; i++) {
+/* Guillermo: contador interactivo, mensajes del equipo y lluvia/explosión de 🍕 y 🍺 adaptada a móvil. */
+const mensajesGuillermo = [
+  "¡Marchando una grande de muzzarella y dos birras bien frías! 🍕🍺",
+  "¡Segunda vuelta! La mesa del equipo agradece 🙌",
+  "¡Pinta IPA y fainá recién horneada en camino! 🍻🍕",
+  "¡Cine, pizza, birra y código para todo el grupo! 🎬🍕",
+  "¡Ronda servida con honores de la casa! 🍕🍻"
+];
+
+function guillermoLluvia(boton) {
+  // 1. Contador interactivo de rondas
+  const numero = document.getElementById("invitaciones-guille");
+  const mensaje = document.getElementById("mensaje-guille");
+  if (numero) {
+    const total = Number(numero.textContent || 0) + 1;
+    numero.textContent = total;
+    if (mensaje) {
+      mensaje.textContent = azar(mensajesGuillermo);
+    }
+  }
+
+  // 2. Feedback háptico en celulares compatibles
+  if (typeof navigator !== "undefined" && navigator.vibrate) {
+    navigator.vibrate(40);
+  }
+
+  const emojis = ["🍕", "🍺", "🍻", "🍕"];
+
+  // 3. Emojis emergentes desde el botón (efecto visible inmediato en pantalla táctil)
+  if (boton) {
+    const rect = boton.getBoundingClientRect();
+    const centroX = rect.left + rect.width / 2;
+    const centroY = rect.top + rect.height / 2;
+
+    for (let j = 0; j < 6; j++) {
+      const pop = document.createElement("span");
+      pop.className = "emoji-pop";
+      pop.textContent = emojis[j % emojis.length];
+      pop.style.left = centroX + "px";
+      pop.style.top = centroY + "px";
+      const offsetX = (Math.random() - 0.5) * 160;
+      const offsetY = -(Math.random() * 80 + 40);
+      const rot = (Math.random() - 0.5) * 60;
+      pop.style.setProperty("--pop-x", offsetX + "px");
+      pop.style.setProperty("--pop-y", offsetY + "px");
+      pop.style.setProperty("--pop-rot", rot + "deg");
+      pop.setAttribute("aria-hidden", "true");
+      document.body.appendChild(pop);
+      setTimeout(function () {
+        pop.remove();
+      }, 1300);
+    }
+  }
+
+  // 4. Lluvia general cayendo por toda la pantalla
+  for (let i = 0; i < 16; i++) {
     const copo = document.createElement("span");
     copo.className = "lluvia-emoji";
     copo.textContent = emojis[i % emojis.length];
-    copo.style.left = (Math.random() * 90) + "vw";
-    copo.style.animationDelay = Math.random() * 0.6 + "s";
+    copo.style.left = (Math.random() * 92) + "vw";
+    copo.style.animationDelay = (Math.random() * 0.5) + "s";
     copo.setAttribute("aria-hidden", "true");
     document.body.appendChild(copo);
     setTimeout(function () {
       copo.remove();
-    }, 2400);
+    }, 2800);
   }
 }
 
