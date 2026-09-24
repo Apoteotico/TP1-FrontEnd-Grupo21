@@ -231,6 +231,19 @@
             <p class="log-part log-resolucion"><strong>Resolución</strong><span>Se ajustaron las media queries en <code>css/styles.css</code> para garantizar una sola columna en móviles pequeños y medianos, se configuró el hero con unidades <code>dvh</code> y se vincularon partículas y contador directamente al botón de Guillermo con alto <code>z-index</code>.</span></p>
           </div>
         </article>
+        
+        <article class="log-entry">
+          <div class="log-head">
+            <time datetime="2026-09-24">24 sep 2026</time>
+            <h3>Color de los botones Portada y Bitácora en perfiles</h3>
+            <span class="log-cat">diseño</span>
+          </div>
+          <div class="log-body">
+            <p class="log-part log-decision"><strong>Decisión</strong><span>Darles a los botones Portada y Bitácora de la navegación entre perfiles el color tomate, con el mismo estilo que Anterior: fondo suave, borde y texto de color, y relleno completo al pasar el mouse.</span></p>
+            <p class="log-part log-dificultad"><strong>Dificultad</strong><span>Después de diferenciar Anterior (azul código) y Siguiente (dorado birra), Portada y Bitácora quedaron como los únicos botones sin color y parecían desactivados. Además, no están en la misma posición en todas las páginas: en <code>template-perfil.html</code> Bitácora es el segundo botón y no el cuarto.</span></p>
+            <p class="log-part log-resolucion"><strong>Resolución</strong><span>Se agregó un bloque en <code>css/styles.css</code> que selecciona los botones por su enlace (<code>a[href="index.html"]</code> y <code>a[href="bitacora.html"]</code>) en lugar de por su posición, así funciona en todos los perfiles y en el template. No se modificó ni borró ninguna regla existente, y se usó el color tomate de la paleta para no sumar colores nuevos.</span></p>
+          </div>
+        </article>
       </div>
 
       <nav class="pager" aria-label="Salir de la bitácora">
