@@ -2,7 +2,7 @@
 
 Somos cinco estudiantes que cocinamos código entre pizzas, birras y películas. Este sitio es nuestro TP1 de Frontend: la carta de presentación del equipo, con portada, perfiles, recomendador de noche y bitácora.
 
-**Entrá por [index.html](index.html) y armate la noche: película + pizza + birra + un proyecto para programar en la semana.**
+**Entrá por [https://tp-1-front-end-grupo21.vercel.app/](https://tp-1-front-end-grupo21.vercel.app/) y armate la noche: película + pizza + birra + un proyecto para programar en la semana.**
 
 ## El equipo
 
@@ -102,7 +102,7 @@ Todo lo pedido está: portada, 5 perfiles completos, JS en portada y en cada per
 
 Falta, y lo hace el equipo al publicar:
 
-1. Subir a GitHub y publicar en Vercel (Preset *Other*, raíz del repo), y pegar la URL acá: **URL:** `https://EL-PROYECTO.vercel.app`
+1. Subir a GitHub y publicar en Vercel (Preset *Other*, raíz del repo), y pegar la URL acá: **URL:** [https://tp-1-front-end-grupo21.vercel.app/](https://tp-1-front-end-grupo21.vercel.app/)
 2. Reemplazar las maquetas de `img/capturas/` por capturas reales del navegador.
 
 ## Para colaborar
