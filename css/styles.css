@@ -1249,6 +1249,26 @@ a:focus-visible {
   transform: translateY(-2px);
 }
 
+/* Botones de salida del recorrido (Portada / Bitácora) 
+========================================= */
+
+.profile-nav .pager a[href="index.html"],
+.profile-nav .pager a[href="bitacora.html"] {
+  background: rgba(200, 69, 44, 0.08);
+  border-color: rgba(200, 69, 44, 0.45);
+  color: var(--tomate);
+  font-weight: 600;
+}
+
+.profile-nav .pager a[href="index.html"]:hover,
+.profile-nav .pager a[href="index.html"]:focus-visible,
+.profile-nav .pager a[href="bitacora.html"]:hover,
+.profile-nav .pager a[href="bitacora.html"]:focus-visible {
+  background: var(--tomate);
+  border-color: var(--tomate);
+  color: #ffffff;
+}
+
 .profile-nav {
   align-content: start;
   gap: 0.9rem;
