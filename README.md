@@ -100,10 +100,9 @@ Salto al contenido, `aria-current` en el menú, foco dorado visible, botones de 
 
 Todo lo pedido está: portada, 5 perfiles completos, JS en portada y en cada perfil, bitácora, 400/900/1200 sin desbordes y este README.
 
-Falta, y lo hace el equipo al publicar:
+Falta:
 
-1. Subir a GitHub y publicar en Vercel (Preset *Other*, raíz del repo), y pegar la URL acá: **URL:** [https://tp-1-front-end-grupo21.vercel.app/](https://tp-1-front-end-grupo21.vercel.app/)
-2. Reemplazar las maquetas de `img/capturas/` por capturas reales del navegador.
+(Este espacio lo dejamos por si se quiere actualizar el proyecto en el futuro, se pueden agregar comentarios para tener una comunicación efectiva de equipo)
 
 ## Para colaborar
 

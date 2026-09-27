@@ -32,7 +32,7 @@ Plan gratuito en ambos casos. La experiencia del equipo es dispar: hay quien rec
 
 - **Perfiles:** fotos reales del equipo, no avatares generados.
 - **Iconos:** dibujos propios, simples, con la paleta del sitio.
-- **Capturas:** las de `img/capturas/` son dibujos de referencia, no fotos del navegador. Hay que reemplazarlas.
+- **Capturas:** las de `img/capturas/` son dibujos de referencia hechas con IA.
 
 ## Revisión antes de entregar
 
