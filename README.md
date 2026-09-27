@@ -64,7 +64,7 @@ Mobile first: hasta `400px` → una columna · desde `480px` → dos columnas ·
 
 ## JavaScript (detalle)
 
-> Las imágenes de `img/capturas/` son dibujos de referencia, no fotos del navegador. Cambiarlas por capturas reales cuando se pueda.
+> Las imágenes de `img/capturas/` son dibujos de referencia hechas con IA.
 
 | Perfil | Función | Efecto |
 | --- | --- | --- |
