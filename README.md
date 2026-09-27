@@ -74,11 +74,11 @@ Mobile first: hasta `400px` → una columna · desde `480px` → dos columnas ·
 | Esteban | `estebanBirras()` | Suma una birra donada al contador |
 | Guillermo | `guillermoLluvia()` | Contador de rondas, mensajes rotativos y lluvia/explosión de 🍕 y 🍺 |
 
-![Captura perfil Florencia](img/capturas/perfil-florencia.svg)
-![Captura perfil Sonia](img/capturas/perfil-sonia.svg)
-![Captura perfil Eitel](img/capturas/perfil-eitel.svg)
-![Captura perfil Esteban](img/capturas/perfil-esteban.svg)
-![Captura perfil Guillermo](img/capturas/perfil-guillermo.svg)
+![Captura perfil Florencia](img/capturas/perfil-florencia.png)
+![Captura perfil Sonia](img/capturas/perfil-sonia.png)
+![Captura perfil Eitel](img/capturas/perfil-eitel.png)
+![Captura perfil Esteban](img/capturas/perfil-esteban.png)
+![Captura perfil Guillermo](img/capturas/perfil-guillermo.png)
 
 Para sumar la tuya: creá la función en `js/perfiles.js`, registrala en `acciones` con tu clave de `data-profile`. Detalle en [CONTRIBUTING.md](CONTRIBUTING.md).
 
